@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @player.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @player.apellido %>
+</p>
+
+<p>
+  <strong>Ciudad nacimiento:</strong>
+  <%= @player.ciudad_nacimiento %>
+</p>
+
+
+<p>
+  <strong>Posicion:</strong>
+  <%= @player.posicion %>
+</p>
+
+<p>
+  <strong>Dorsal:</strong>
+  <%= @player.dorsal %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @player.team.nombre %>
+</p>
+
+<p>
+  <strong>Idiomas:</strong>
+        <%@player.languages.each do |i|%>
+            <li><%=i.nombre%></li>
+        <%end%>
+</p>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>
